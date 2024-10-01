@@ -3,9 +3,9 @@ import { BiLeftArrow } from 'react-icons/bi'
 import { FaAngleLeft } from 'react-icons/fa'
 import { MdArrowLeft, MdDehaze } from 'react-icons/md'
 
-function TopBar() {
+function TopBar({isCollapsed}) {
   return (
-    <div className='flex items-center justify-start w-full h-16 py-4 px-2 shadow-md'>
+    <div className={`bg-gray-200 fixed top-0 right-0 ${isCollapsed ? 'w-[95%]' : 'w-full lg:w-[75%]'} flex items-center justify-start transition-all ease-in-out duration-700 h-16 py-4 px-2 shadow-md`}>
         <span className='flex lg:hidden'>
             <FaAngleLeft className='w-6 h-6 mr-6' />
         </span>

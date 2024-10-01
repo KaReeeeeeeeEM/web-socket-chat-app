@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import { BiSend } from "react-icons/bi";
 
-function PromptBar() {
+function PromptBar({isCollapsed}) {
   return (
-    <div className="absolute bottom-0 left-0 w-full h-auto p-2">
+    <div className={`fixed bottom-0 right-0 ${isCollapsed ? 'w-[95%]' : 'w-full lg:w-[75%]'} h-auto p-2 transition-all ease-in-out duration-700`}>
     <div className="relative flex items-center">
       <input
         type="text"
