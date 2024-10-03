@@ -148,13 +148,16 @@ export default function RegisterUser({ isOpen, onClose, callback }) {
               </span>
             </div>
 
-            <div className="w-full">
+            <div className="flex flex-col items-center w-full">
               <button
                 type="submit"
                 className="w-full bg-purple-600 text-white py-2 rounded-lg flex items-center justify-center transition ease-in-out duration-700 hover:bg-purple-600"
                 disabled={loading}
               >
                 {loading ? <LiaSpinnerSolid className="animate-spin" /> : "Login"}
+              </button>
+              <button onClick={onClose} className="w-full bg-gray-400 text-white py-2 rounded-lg flex items-center justify-center transition ease-in-out duration-700 hover:bg-gray-600 mt-2">
+                Cancel
               </button>
             </div>
             <p className="text-gray-500 text-center text-sm">
@@ -237,7 +240,7 @@ export default function RegisterUser({ isOpen, onClose, callback }) {
               />
             </div>
 
-            <div className="w-full">
+            <div className="flex flex-col items-center w-full">
               <button
                 type="submit"
                 className="w-full bg-purple-600 text-white py-2 rounded-lg flex items-center justify-center transition ease-in-out duration-700 hover:bg-purple-600"
@@ -248,6 +251,9 @@ export default function RegisterUser({ isOpen, onClose, callback }) {
                 ) : (
                   "Register"
                 )}
+              </button>
+              <button onClick={onClose} className="w-full bg-gray-400 text-white py-2 rounded-lg flex items-center justify-center transition ease-in-out duration-700 hover:bg-gray-600 mt-2">
+                Cancel
               </button>
             </div>
             <p className="text-gray-500 text-center text-sm">
